@@ -1,0 +1,146 @@
+
+.orbDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    width: 25%;
+    height: 25%;
+    position: absolute;
+}
+.multipleOrb{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    position: relative;
+}
+.orbDiv2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    width: 25%;
+    height: 25%;
+    position: absolute;
+}
+.orb_stable{
+    animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  /* transform: rotate(3deg); */
+   /* transform: rotate(0.3rad);/ */
+   /* transform: rotate(3grad); */ 
+   /* transform: rotate(.03turn);  */
+}
+
+.orb_excited{
+    animation: vibrate-1 0.3s linear infinite both;
+}
+
+.orb_top{
+    animation-name: towardsTop;
+    animation-duration: .3s;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 4;
+}
+.orb_bottom{
+    animation-name: towardsBottom;
+    animation-duration: .3s;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 4;
+
+}
+.orb_left{
+    animation-name: towardsLeft;
+    animation-duration: .3s;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 4;
+}
+.orb_right{
+    animation-name: towardsRight;
+    animation-duration: .3s;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 4;
+}
+
+
+
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes vibrate-1 {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  
+@keyframes towardsTop {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-4rem);
+    }
+  }
+
+  @keyframes towardsBottom {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(4rem);
+    }
+  }
+  @keyframes towardsLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-4rem);
+    }
+  }
+  @keyframes towardsRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(4rem);
+    }
+  }
